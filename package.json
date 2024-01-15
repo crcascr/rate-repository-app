@@ -29,13 +29,5 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2"
   },
-  "private": true,
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "standard",
-      "standard-jsx",
-      "standard-react"
-    ]
-  }
+  "private": true
 }
