@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import StyledText from "./StyledText";
+import RepositoryStats from "./RepositoryStats";
 
 function RepositoryItem(props) {
   return (
@@ -10,10 +11,7 @@ function RepositoryItem(props) {
       </StyledText>
       <StyledText>{props.description}</StyledText>
       <StyledText>{props.language}</StyledText>
-      <StyledText>Stars: {props.stargazersCount}</StyledText>
-      <StyledText>Forks: {props.forksCount}</StyledText>
-      <StyledText>Review: {props.reviewCount}</StyledText>
-      <StyledText>Rating: {props.ratingAverage}</StyledText>
+      <RepositoryStats {...props} />
     </View>
   );
 }
