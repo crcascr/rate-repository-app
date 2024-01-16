@@ -17,10 +17,8 @@ function RepositoryItem(props) {
           <Image style={styles.image} source={{ uri: ownerAvatarUrl }}></Image>
         </View>
         <View style={{ flex: 1 }}>
-          <StyledText fontWeight="bold">
-            {fullName}
-          </StyledText>
-          <StyledText color='secondary'>{description}</StyledText>
+          <StyledText fontWeight="bold">{fullName}</StyledText>
+          <StyledText color="secondary">{description}</StyledText>
           <StyledText style={styles.language}>{language}</StyledText>
         </View>
       </View>
@@ -42,7 +40,7 @@ const styles = StyleSheet.create({
   },
   language: {
     padding: 4,
-    marginVertical:4,
+    marginVertical: 4,
     color: "#fefefe",
     backgroundColor: theme.colors.primary,
     alignSelf: "flex-start",
