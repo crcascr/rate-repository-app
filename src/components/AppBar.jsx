@@ -1,28 +1,36 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import StyledText from "./StyledText";
 import Constants from "expo-constants";
 import theme from "../theme";
-import { Link } from "react-router-native";
+import { Link, useLocation } from "react-router-native";
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.appBar.primary,
     paddingTop: Constants.statusBarHeight + 10,
-    paddingBottom: 10,
     flexDirection: "row",
     borderRadius: 5,
   },
+  scroll: {
+    paddingBottom: 15,
+  },
   text: {
-    color: theme.appBar.primaryText,
+    color: theme.appBar.secondaryText,
     paddingHorizontal: 10,
+  },
+  active: {
+    color: theme.appBar.primaryText,
   },
 });
 
-function AppBarTab({ active, children, to }) {
+function AppBarTab({ children, to }) {
+  const { pathname } = useLocation();
+  const active = pathname === to;
+  const textStyles = [styles.text, active && styles.active];
   return (
     <Link to={to}>
-      <StyledText fontWeight="bold" style={styles.text}>
+      <StyledText fontWeight="bold" style={textStyles}>
         {children}
       </StyledText>
     </Link>
@@ -32,12 +40,10 @@ function AppBarTab({ active, children, to }) {
 function AppBar() {
   return (
     <View style={styles.container}>
-      <AppBarTab active to="/">
-        Repositories
-      </AppBarTab>
-      <AppBarTab active to={"/signin"}>
-        SignIn
-      </AppBarTab>
+      <ScrollView horizontal style={styles.scroll}>
+        <AppBarTab to="/">Repositories</AppBarTab>
+        <AppBarTab to={"/signin"}>SignIn</AppBarTab>
+      </ScrollView>
     </View>
   );
 }
