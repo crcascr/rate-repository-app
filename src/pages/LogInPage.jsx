@@ -36,7 +36,11 @@ function LogInPage() {
         return (
           <View style={styles.form}>
             <FormikInputValues name="email" placeholder="E-mail" />
-            <FormikInputValues name="password" placeholder="Password" />
+            <FormikInputValues
+              name="password"
+              placeholder="Password"
+              secureTextEntry
+            />
             <Button onPress={handleSubmit} title="Log In" />
           </View>
         );
