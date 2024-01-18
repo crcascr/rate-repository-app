@@ -1,6 +1,6 @@
 # Rate Repository App
 
-Aplicación desarrollada en [React Native](https://reactnative.dev/) utilizando la plataforma [Expo](https://expo.dev/). Esta aplicación es parte del [curso](https://www.youtube.com/watch?v=qi87b6VcIHY) de Miguel Ángel Durán (MiduDev) sobre React Native, el cual se basa en el original [FullStack Open](https://fullstackopen.com/es/). Además, hace uso de la [Rate Repository API](https://github.com/Kaltsoon/rate-repository-api), desarrollada por FullStack Open para esta sección de su curso.
+Aplicación desarrollada en [React Native](https://reactnative.dev/) utilizando la plataforma [Expo](https://expo.dev/). Esta aplicación es parte del [curso](https://www.youtube.com/watch?v=qi87b6VcIHY) de Miguel Ángel Durán ([MiduDev](https://twitter.com/midudev)) sobre React Native, el cual se basa en el original [FullStack Open](https://fullstackopen.com/es/). Además, hace uso de la [Rate Repository API](https://github.com/Kaltsoon/rate-repository-api), desarrollada por FullStack Open para esta sección de su curso.
 
 ## Contenido
 
@@ -25,6 +25,3 @@ La aplicación se desarrolló como parte del [curso de Miguel Ángel Durán (Mid
 ## API Rate Repository
 
 La aplicación utiliza la [Rate Repository API](https://github.com/Kaltsoon/rate-repository-api) desarrollada por FullStack Open para esta sección del curso.
-
-
-
